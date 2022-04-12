@@ -130,14 +130,14 @@ Exec if $EventID IN (1035, 1040, 1041, 4624, 4627, 4634, 4672, 7036, 7040, 9000,
 
 <Output Event_Out>
     Module      om_tcp
-    Host        logs.tulalipdata.com
+    Host        logs
     Port        12201
     Exec        to_json();
 </Output>
 
 <Output IIS_out>
     Module      om_tcp
-    Host        logs.tulalipdata.com
+    Host        logs
     Port        12202
     Exec        to_json();
 </Output>
