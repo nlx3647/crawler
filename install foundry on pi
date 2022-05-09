@@ -8,4 +8,7 @@ sudo apt-get install nano unzip -y
 cd
 node $HOME/foundryvtt/resources/app/main.js --dataPath=$HOME/foundrydata
 pm2 start "node $HOME/foundryvtt/resources/app/main.js --dataPath=$HOME/foundrydata" --name foundry
+--or
+pm2 start foundry_launcher.sh --name foundry
+
 pm2 save
