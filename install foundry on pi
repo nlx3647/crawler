@@ -6,6 +6,6 @@ pm2 startup
 sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp $HOME
 sudo apt-get install nano unzip -y
 cd
-node $HOME/foundry/resources/app/main.js --dataPath=$HOME/foundryuserdata
+node $HOME/foundryvtt/resources/app/main.js --dataPath=$HOME/foundrydata
 pm2 start "node $HOME/foundryvtt/resources/app/main.js --dataPath=$HOME/foundrydata" --name foundry
 pm2 save
