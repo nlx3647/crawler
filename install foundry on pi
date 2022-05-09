@@ -7,5 +7,5 @@ sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -
 sudo apt-get install nano unzip -y
 cd
 node /home/nlx3647/foundry/resources/app/main.js --dataPath=/home/nlx3647/foundryuserdata
-pm2 start "node /home/nlx3647/foundryvtt/resources/app/main.js --dataPath=/home/nlx3647/foundrydata" --name foundry
+pm2 start "node $HOME/foundryvtt/resources/app/main.js --dataPath=$HOME/foundrydata" --name foundry
 pm2 save
