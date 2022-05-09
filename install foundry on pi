@@ -3,9 +3,9 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo npm install pm2 -g
 pm2 startup
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/nlx3647
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp $HOME
 sudo apt-get install nano unzip -y
 cd
-node /home/nlx3647/foundry/resources/app/main.js --dataPath=/home/nlx3647/foundryuserdata
+node $HOME/foundry/resources/app/main.js --dataPath=$HOME/foundryuserdata
 pm2 start "node $HOME/foundryvtt/resources/app/main.js --dataPath=$HOME/foundrydata" --name foundry
 pm2 save
