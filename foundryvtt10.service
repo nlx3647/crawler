@@ -1,0 +1,11 @@
+[Unit]
+Description=Foundry VTT v10
+
+[Service]
+Type=simple
+ExecStart=node /home/user/foundryvtt.10/resources/app/main.js --dataPath=/home/user/foundrydata.10
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
